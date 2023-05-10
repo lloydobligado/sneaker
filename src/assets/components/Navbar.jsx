@@ -15,7 +15,7 @@ const Navbar = () => {
     };
 
     const listItemClasses = `md:h-[112px] flex items-center md:font-normal text-[#68707D] hover:text-[#1D2025] md:ml-[16px] md:mr-[16px] mx-auto my-[8.5px] font-bold cursor-pointer transition duration-300 ${
-      isHovered ? 'border-b-4 border-[#FF7D1A] ease-in mt-[3.5px]' : 'ease-out'
+      isHovered ? 'border-b-4 border-[#FF7D1A] ease-in' : 'ease-out mt-[3.5px]'
     }`;
 
     return (
@@ -48,7 +48,7 @@ const Navbar = () => {
       <div className="w-full h-[68px] md:h-[112px] flex items-center justify-between md:border-b-2 md:border-[#F7F8FD]">
         <div className="h-[112px] flex items-center">
           <img className="md:hidden pr-4 cursor-pointer" onClick={handleMenu} src="./src/assets/images/icon-menu.svg" alt="menu" />
-          <img className="w-[137px] mr-[42px] cursor-pointer" src="../../assets/images/logo.svg" alt="sneaker logo" />
+          <img className="w-[137px] mr-[42px] cursor-pointer" src="./src/assets/images/logo.svg" alt="sneaker logo" />
           <ul className={`md:relative md:w-auto md:h-[112px] md:flex ${slideMenu ? 'hidden' : 'flex'} md:flex-row md:items-center fixed h-full bg-white top-0 left-0 flex-col w-[75%]`}>
             <img className='md:hidden block mt-[25px] ml-[25px] mb-[36px] w-[15px] h-[15px] cursor-pointer' onClick={handleMenu} src="./src/assets/images/icon-close.svg" alt="close" />
             {NavList}
