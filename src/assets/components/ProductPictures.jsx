@@ -5,7 +5,7 @@ const ProductPictures = () => {
 
   const ProdPhotos = ProductPhotos.map(productPhoto => {
     return (
-        <img className='2xl:w-[88px] 2xl:h-[88px] w-[70.4px] h-[70.4px] rounded-[10px] hover:opacity-50 cursor-pointer' key={productPhoto.id} src={productPhoto.image} alt={productPhoto.name} />
+        <img className='2xl:w-[88px] 2xl:h-[88px] w-[70.4px] h-[70.4px] rounded-[10px] hover:opacity-50 cursor-pointer transition duration-300' key={productPhoto.id} src={productPhoto.image} alt={productPhoto.name} />
     )
   })
   return (
