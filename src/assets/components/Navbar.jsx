@@ -14,7 +14,7 @@ const Navbar = () => {
       setIsHovered(prevIsHovered => !prevIsHovered);
     };
 
-    const listItemClasses = `h-[112px] hidden md:flex items-center text-[#68707D] hover:text-[#1D2025] ml-[16px] mr-[16px] cursor-pointer transition duration-300 ${
+    const listItemClasses = `md:h-[112px] flex items-center md:font-normal text-[#68707D] hover:text-[#1D2025] md:ml-[16px] md:mr-[16px] mx-auto my-[8.5px] font-bold cursor-pointer transition duration-300 ${
       isHovered ? 'border-b-4 border-[#FF7D1A] ease-in mt-[3.5px]' : 'ease-out'
     }`;
 
@@ -33,16 +33,26 @@ const Navbar = () => {
   const [cartDropdown, setCartDropdown] = useState(false);
 
   const handleCart = () => {
-    setCartDropdown((prevCartDropdown) => !prevCartDropdown);
+    setCartDropdown(prevCartDropdown => !prevCartDropdown);
   };
+
+  
+  const [slideMenu, setSlideMenu] = useState(true);
+
+  const handleMenu = () => {
+    setSlideMenu(prevSlide => !prevSlide)
+  }
 
   return (
     <div className="w-full h-[68px] md:h-[112px] lg:pl-[164px] lg:pr-[164px] md:pl-[50px] md:pr-[50px] pl-[24px] pr-[24px] flex items-center bg-white ">
       <div className="w-full h-[68px] md:h-[112px] flex items-center justify-between md:border-b-2 md:border-[#F7F8FD]">
         <div className="h-[112px] flex items-center">
-          <img className="md:hidden pr-4" src="src/assets/images/icon-menu.svg" alt="menu" />
+          <img className="md:hidden pr-4 cursor-pointer" onClick={handleMenu} src="src/assets/images/icon-menu.svg" alt="menu" />
           <img className="w-[137px] mr-[42px] cursor-pointer" src="src/assets/images/logo.svg" alt="sneaker logo" />
-          <ul className="h-[112px] flex items-center">{NavList}</ul>
+          <ul className={`md:relative md:w-auto md:h-[112px] ${slideMenu ? 'hidden' : 'flex'} md:flex-row md:items-center fixed h-full bg-white top-0 left-0 flex-col w-[75%]`}>
+            <img className='md:hidden block mt-[25px] ml-[25px] mb-[36px] w-[15px] h-[15px] cursor-pointer' onClick={handleMenu} src="src/assets/images/icon-close.svg" alt="close" />
+            {NavList}
+          </ul>
         </div>
 
         <div className="md:w-[115px] md:h-[50px] w-[67px] h-[24px] flex items-center justify-between">

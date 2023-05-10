@@ -19,7 +19,9 @@ const ProductDetails = () => {
                 <p className='2xl:mt-[9px] font-bold 2xl:text-base 2xl:tracking-wide md:mt-[7.2px]  md:text-[12.8px] md:leading-[19.2px] md:tracking-[0.02px] mt-[30px] text-base tracking-wide line-through text-[#1D2025]'>$250.00</p>
             </div>
         </div>
-        <BtnGroup />
+        <div className='w-full mb-8'>
+            <BtnGroup />
+        </div>
     </div>
   )
 }
