@@ -49,7 +49,7 @@ const Navbar = () => {
         <div className="h-[112px] flex items-center">
           <img className="md:hidden pr-4 cursor-pointer" onClick={handleMenu} src="src/assets/images/icon-menu.svg" alt="menu" />
           <img className="w-[137px] mr-[42px] cursor-pointer" src="src/assets/images/logo.svg" alt="sneaker logo" />
-          <ul className={`md:relative md:w-auto md:h-[112px] ${slideMenu ? 'hidden' : 'flex'} md:flex-row md:items-center fixed h-full bg-white top-0 left-0 flex-col w-[75%]`}>
+          <ul className={`md:relative md:w-auto md:h-[112px] md:flex ${slideMenu ? 'hidden' : 'flex'} md:flex-row md:items-center fixed h-full bg-white top-0 left-0 flex-col w-[75%]`}>
             <img className='md:hidden block mt-[25px] ml-[25px] mb-[36px] w-[15px] h-[15px] cursor-pointer' onClick={handleMenu} src="src/assets/images/icon-close.svg" alt="close" />
             {NavList}
           </ul>
