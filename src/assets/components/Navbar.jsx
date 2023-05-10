@@ -4,10 +4,26 @@ import Menu from '../utils/menu';
 
 const Navbar = () => {
   const NavList = Menu.map((menu) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+      setIsHovered(prevIsHovered => !prevIsHovered);
+    };
+
+    const handleMouseLeave = () => {
+      setIsHovered(prevIsHovered => !prevIsHovered);
+    };
+
+    const listItemClasses = `h-[112px] hidden md:flex items-center text-[#68707D] hover:text-[#1D2025] ml-[16px] mr-[16px] cursor-pointer transition duration-300 ${
+      isHovered ? 'border-b-4 border-[#FF7D1A] ease-in mt-[3.5px]' : 'ease-out'
+    }`;
+
     return (
       <li
-        className="h-[112px] hidden md:flex items-center text-[#68707D] hover:text-[#1D2025] hover:border-b-4 hover:border-[#FF7D1A] ml-[16px] mr-[16px] cursor-pointer"
+        className={listItemClasses}
         key={menu.id}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <a href={menu.link}>{menu.name}</a>
       </li>
@@ -17,11 +33,11 @@ const Navbar = () => {
   const [cartDropdown, setCartDropdown] = useState(false);
 
   const handleCart = () => {
-    setCartDropdown(prevCartDropdown => !prevCartDropdown);
+    setCartDropdown((prevCartDropdown) => !prevCartDropdown);
   };
 
   return (
-    <div className="w-full h-[68px] md:h-[112px] lg:pl-[164px] lg:pr-[164px] md:pl-[50px] md:pr-[50px] pl-[24px] pr-[24px] flex items-center bg-white">
+    <div className="w-full h-[68px] md:h-[112px] lg:pl-[164px] lg:pr-[164px] md:pl-[50px] md:pr-[50px] pl-[24px] pr-[24px] flex items-center bg-white ">
       <div className="w-full h-[68px] md:h-[112px] flex items-center justify-between md:border-b-2 md:border-[#F7F8FD]">
         <div className="h-[112px] flex items-center">
           <img className="md:hidden pr-4" src="src/assets/images/icon-menu.svg" alt="menu" />
@@ -53,7 +69,7 @@ const Navbar = () => {
                         </div>
 
                         <div className='mt-[28px] flex flex-col justify-center items-center'>
-                            <div className='w-[312px] flex justify-between items-center hover:bg-slate-50'>
+                            <div className='w-[312px] flex justify-between items-center hover:bg-slate-50 transition duration-300'>
                                 <img className='w-[50px] h-[50px] rounded-[4px]' src="src/assets/images/image-product-1-thumbnail.jpg" alt="item"/>
                                 <div>
                                     <p className='font-medium text-[16px] leading-[19.84px] text-bla
@@ -66,8 +82,8 @@ const Navbar = () => {
                                 <img className='w-[14px] h-[16px] cursor-pointer' src="src/assets/images/icon-delete.svg" alt="delete icon" />
                             </div>
 
-                            <button className='flex justify-center items-center font-bold  mt-[26px] w-[312px] h-[54px] text-base text-white bg-[#FF7D1A] rounded-[10px] hover:shadow-lg hover:shadow-[#fbd8bf]'>
-                                <img className='2xl:mr-4 mr-[12.8px]' src="src/assets/images/icon-cart.svg" alt="cart icon"  /> 
+                            <button className='flex justify-center items-center font-bold  mt-[26px] w-[312px] h-[54px] text-base text-white bg-[#FF7D1A] hover:bg-[#d56815] rounded-[10px] hover:shadow-lg hover:shadow-[#fbd8bf] transition duration-300'>
+                                <img className='2xl:mr-4 mr-[12.8px]' src="src/assets/images/icon-cart-light.svg" alt="cart icon"  /> 
                                 Add to Cart
                             </button>
                         </div>
@@ -77,7 +93,7 @@ const Navbar = () => {
             </Transition>
           </div>
           <img
-            className="md:w-[50px] md:h-[50px] w-[24px] h-[24px] hover:border-[1px] hover:rounded-full hover:border-[#FF7D1A] cursor-pointer"
+            className="md:w-[50px] md:h-[50px] w-[24px] h-[24px] hover:border-[4px] hover:rounded-full hover:border-[#FF7D1A] cursor-pointer transition duration-300"
             src="src/assets/images/image-avatar.png"
             alt="avatar"
           />
