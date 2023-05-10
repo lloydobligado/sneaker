@@ -59,7 +59,7 @@ const Navbar = () => {
                                     <p className='font-medium text-[16px] leading-[19.84px] text-bla
                                     '>Fall Limited Edition Sneakers</p>
                                     <div className='flex'>
-                                        <p className='text-[16px] leading-[20px] tracking-wide text-black'>$125.oo x 3 <span className='font-bold '>$375.00</span></p>
+                                        <p className='text-[16px] leading-[20px] tracking-wide text-black'>$125.00 x 3 <span className='font-bold '>$375.00</span></p>
                                         
                                     </div>
                                 </div>
