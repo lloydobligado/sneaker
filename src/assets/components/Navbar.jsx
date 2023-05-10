@@ -59,8 +59,8 @@ const Navbar = () => {
                                     <p className='font-medium text-[16px] leading-[19.84px] text-bla
                                     '>Fall Limited Edition Sneakers</p>
                                     <div className='flex'>
-                                        <p>$125.oo x 3</p>
-                                        <p>$$375.00</p>
+                                        <p className='text-[16px] leading-[20px] tracking-wide text-black'>$125.oo x 3 <span className='font-bold '>$375.00</span></p>
+                                        
                                     </div>
                                 </div>
                                 <img className='w-[14px] h-[16px] cursor-pointer' src="src/assets/images/icon-delete.svg" alt="delete icon" />
