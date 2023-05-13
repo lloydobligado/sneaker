@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from './assets/components/Navbar'
-import Hero from './assets/Pages/Hero'
+import Navbar from './components/Navbar'
+import Hero from './pages/Hero'
 
 function App() {
 

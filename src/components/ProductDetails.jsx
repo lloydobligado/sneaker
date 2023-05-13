@@ -2,6 +2,8 @@ import React from 'react'
 import BtnGroup from './BtnGroup'
 
 const ProductDetails = () => {
+
+
   return (
     <div className='2xl:ml-[126px] md:ml-[100.8px] md:mt-[50px] md:mb-[50px] mt-[25px] flex flex-col items-center'>
         <div className='2xl:w-[424px] 2xl:h-[337px] md:w-[339.2px] md:h-[269.6px] md:pr-0 md:pl-0 w-full h-full pr-10 pl-10'>
