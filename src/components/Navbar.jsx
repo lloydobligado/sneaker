@@ -54,7 +54,7 @@ const Navbar = () => {
   const addedItem = cartItems.map(cartItem => {
     return (
       <div key={cartItem.id} className='mt-[28px] w-[312px] flex justify-between items-center hover:bg-slate-50 transition duration-300'>
-        <img className='w-[50px] h-[50px] rounded-[4px]' src="assets/images/image-product-1-thumbnail.jpg" alt="item"/>
+        <img className='w-[50px] h-[50px] rounded-[4px]' src="public/assets/images/image-product-1-thumbnail.jpg" alt="item"/>
         <div>
             <p className='font-medium text-[16px] leading-[19.84px] text-black'>Fall Limited Edition Sneakers</p>
             <div className='flex'>
