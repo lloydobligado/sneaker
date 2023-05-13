@@ -11,13 +11,13 @@ const ProductPictures = () => {
   return (
     <>
         <div className='2xl:w-[447px] 2xl:h-[567px] w-[357.6px] h-[453.6px] md:mt-[50px] md:mb-[50px] md:block hidden'>
-            <img className='rounded-[15px] lg:cursor-pointer' src="src/assets/images/image-product-1.jpg" alt="image-product-1" />
+            <img className='rounded-[15px] lg:cursor-pointer' src="assets/images/image-product-1.jpg" alt="image-product-1" />
             <div className='flex justify-between 2xl:mt-[32px] mt-[25.6px]'>
                 { ProdPhotos }
             </div>
         </div>
         <div className='md:hidden block'>
-            <img src="src/assets/images/image-product-1.jpg" alt="image-product-1" />
+            <img src="assets/images/image-product-1.jpg" alt="image-product-1" />
         </div>
     </>
   )
