@@ -5,11 +5,12 @@ import { item } from './utils/index';
 function App() {
   
   const [cartItems, setCartItems] = useState(item)
+  const [currentId, setCurrentId] = useState(1);
 
   const handleAddItem = () => {
-    const newItem = { id: 3, price: 10, quantity: 4, total: 40 };
+    const newItem = { id: currentId, price: 10, quantity: 4, total: 40 };
     setCartItems(prevCartItems => [...prevCartItems, newItem]);
-    console.log(cartItems);
+    setCurrentId(prevId => prevId + 1);
   }
 
   return (
