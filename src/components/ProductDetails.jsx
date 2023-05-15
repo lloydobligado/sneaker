@@ -1,7 +1,7 @@
 import React from 'react'
 import BtnGroup from './BtnGroup'
 
-const ProductDetails = () => {
+const ProductDetails = ({handleAddItem}) => {
 
 
   return (
@@ -22,7 +22,7 @@ const ProductDetails = () => {
             </div>
         </div>
         <div className='w-full mb-8'>
-            <BtnGroup />
+            <BtnGroup handleAddItem={handleAddItem}/>
         </div>
     </div>
   )

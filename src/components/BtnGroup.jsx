@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import AddtoCart from './AddtoCart'
 
-const BtnGroup = () => {
+const BtnGroup = ({handleAddItem}) => {
   const [count, setCount] = useState(0)
 
   const handleSubtract = () => {
@@ -28,7 +28,7 @@ const BtnGroup = () => {
           </button>
         </div>
 
-        <AddtoCart />
+        <AddtoCart handleAddItem={handleAddItem}/>
     </div>
   )
 }

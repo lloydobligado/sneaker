@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import Menu from '../utils/menu';
-import { item } from '../utils/index';
 
-const Navbar = () => {
+const Navbar = ({cartItems, setCartItems, handleAddItem}) => {
   const NavList = Menu.map((menu) => {
     const [isHovered, setIsHovered] = useState(false);
 
@@ -43,8 +42,6 @@ const Navbar = () => {
   const handleMenu = () => {
     setSlideMenu(prevSlide => !prevSlide)
   }
-  
-  const [cartItems, setCartItems] = useState(item)
 
   const handleDelete = (itemId) => {
     const updatedItems = cartItems.filter((item) => item.id !== itemId);
@@ -69,13 +66,7 @@ const Navbar = () => {
         />
       </div>
     )
-  })
-
-  const handleAddItem = () => {
-    const newItem = { price: 10, quantity: 4, total: 40 };
-    setCartItems(prevCartItems => [...prevCartItems, newItem]);
-    console.log(cartItems);
-  }
+  });
 
   return (
     <div className="w-full h-[68px] md:h-[112px] lg:pl-[164px] lg:pr-[164px] md:pl-[50px] md:pr-[50px] pl-[24px] pr-[24px] flex items-center bg-white ">
