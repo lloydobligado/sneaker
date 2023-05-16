@@ -82,12 +82,19 @@ const Navbar = ({cartItems, setCartItems, handleAddItem}) => {
 
         <div className="md:w-[115px] md:h-[50px] w-[67px] h-[24px] flex items-center justify-between">
           <div>
-            <img
-              className="cursor-pointer"
-              onClick={handleCart}
-              src="assets/images/icon-cart.svg"
-              alt="cart"
-            />
+            <div className='relative'>
+              <img
+                className="cursor-pointer"
+                onClick={handleCart}
+                src="assets/images/icon-cart.svg"
+                alt="cart"
+              />
+              {cartItems.length > 0 &&
+              <div className='flex justify-center items-center absolute top-[-50%] right-[-50%] w-[20px] h-[13px] bg-[#FF7D1A] hover:bg-[#d56815] rounded-[9px] cursor-pointer'>
+                 <p className='text-[#FFEDE0] font-bold text-[10px] leading-[12px]'>{cartItems.length}</p>
+              </div>
+              }
+            </div>
 
             <Transition
               show={cartDropdown}
