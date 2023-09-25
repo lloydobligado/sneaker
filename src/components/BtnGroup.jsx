@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import ButtonComponent from './Button/button'
 import Minus from "../assets/images/icon-minus.svg"
 import Plus from "../assets/images/icon-plus.svg"
 
