@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductPhotos from '../utils/product-photos'
-import ImageProduct1 from '../assets/images/image-product-1.jpg' 
+import ImageProduct1 from '../../assets/images/image-product-1.jpg' 
 
 const ProductPictures = () => {
 
